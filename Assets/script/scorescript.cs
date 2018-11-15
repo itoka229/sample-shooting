@@ -7,7 +7,7 @@ public class scorescript : MonoBehaviour {
 
     public Text scoreText; //Text用変数
     public int score = 0; //スコア計算用変数
-    private bool gamemaster;
+    private GameObject gamemaster;
 
     // Use this for initialization
     void Start()
@@ -15,13 +15,14 @@ public class scorescript : MonoBehaviour {
 
         score = 3;//初期スコア
         SetScore(); //初期スコアを代入して表示
+         gamemaster = GameObject.FindGameObjectWithTag("gun");
     }
     // Update is called once per frame
     void Update()
     {
-         gamemaster = GameObject.FindGameObjectWithTag("gun").GetComponent<timerscript>().gamemaster;
+
         //制限時間以内の時
-        if (gamemaster == true)
+        if (gamemaster.GetComponent<timerscript>().gamemaster == true)
         {
             //scoreが0より大きい時
             if (score > 0)
@@ -42,7 +43,7 @@ public class scorescript : MonoBehaviour {
     void OnCollisionEnter(Collision collision)
     {
         //制限時間以内の時
-        if (gamemaster == true)
+        if (gamemaster.GetComponent<timerscript>().gamemaster == true)
         {
             //衝突した相手のタグを参照して得点を加算する
             string yourTag = collision.gameObject.tag;
@@ -50,6 +51,7 @@ public class scorescript : MonoBehaviour {
             if (yourTag == "Target1")
             {
                 score += 1;
+                gamemaster. GetComponent<timerscript>().tmpTime -= 3;
             }
 
             if (yourTag == "Target2")

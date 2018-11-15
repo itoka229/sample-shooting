@@ -1143,7 +1143,7 @@ MonoBehaviour:
   - {fileID: 1503176116484480, guid: e375b0af31d8e7c4489afeeb87fa4b86, type: 2}
   - {fileID: 1755962084578696, guid: c7382321c19c0404cb44453e8c2ea69c, type: 2}
   - {fileID: 1924217154915476, guid: aff47d0fca1e53244a323dbd82ddc90a, type: 2}
-  interval: 5
+  interval: 3
   tmpTime: 0
 --- !u!114 &1074609244
 MonoBehaviour:
