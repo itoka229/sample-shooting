@@ -13,7 +13,7 @@ public class scorescript : MonoBehaviour {
     void Start()
     {
 
-        score = 3;//初期スコア
+        score = 30;//初期スコア
         SetScore(); //初期スコアを代入して表示
          gamemaster = GameObject.FindGameObjectWithTag("gun");
     }
@@ -30,7 +30,7 @@ public class scorescript : MonoBehaviour {
                 //zキーが押されたとき順番に起こる
                 if (Input.GetKeyDown(KeyCode.Z))
                 {
-                    score -= 1;
+                    score -= 10;
 
                     SetScore();
                 }
@@ -50,18 +50,18 @@ public class scorescript : MonoBehaviour {
 
             if (yourTag == "Target1")
             {
-                score += 1;
-                gamemaster. GetComponent<timerscript>().tmpTime -= 3;
+                score += 10;
+                gamemaster. GetComponent<timerscript>().tmpTime -= 5;
             }
 
             if (yourTag == "Target2")
             {
-                score += 2;
+                score += 20;
             }
 
             if (yourTag == "Target3")
             {
-                score += 3;
+                score += 30;
             }
             if (yourTag == "barrel")
             {
