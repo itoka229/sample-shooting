@@ -6,7 +6,7 @@ using UnityEngine.UI;
 public class scorescript : MonoBehaviour {
 
     public Text scoreText; //Text用変数
-    public int score = 0; //スコア計算用変数
+    public static int score = 0; //スコア計算用変数
     private GameObject gamemaster;
 
     // Use this for initialization

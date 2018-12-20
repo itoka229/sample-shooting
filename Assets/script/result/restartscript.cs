@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
-public class openingscript : MonoBehaviour {
+public class restartscript : MonoBehaviour {
 
 	// Use this for initialization
 	void Start () {
@@ -14,7 +14,7 @@ public class openingscript : MonoBehaviour {
 	void Update () {
         if (Input.GetKeyDown(KeyCode.Z))
         {
-            SceneManager.LoadScene("ShootingScene");
+            SceneManager.LoadScene("waiting");
         }
 	}
 }

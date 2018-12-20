@@ -2,9 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class orderscriptz : MonoBehaviour {
-    //order
-    public GameObject tumb;
+public class orderscriptz : MonoBehaviour {/*
     //制御用
     public int shoot = 0;
     public int scor = 0;
@@ -18,7 +16,7 @@ public class orderscriptz : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
-        score = tumb.GetComponent<scorescript>().score;
+        score = scorescript.score;
         //scoreが0より大きいとき
         if (score > 0)
         {
@@ -33,5 +31,5 @@ public class orderscriptz : MonoBehaviour {
         }
 
 
-    }
+    }*/
 }

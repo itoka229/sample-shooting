@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class timerscript : MonoBehaviour {
 
@@ -18,7 +19,7 @@ public class timerscript : MonoBehaviour {
 
     // Update is called once per frame
     void Update()
-    {   
+    {
         //制限時間を測る
         tmpTime += Time.deltaTime;
         if (tmpTime >= interval)
@@ -27,9 +28,17 @@ public class timerscript : MonoBehaviour {
             gamemaster = false;
             GetComponent<shooting>().enabled = false;
             text.SetActive(true);
-            
+            StartCoroutine("Changescene");
+
+
+
         }
 
+    }
+    IEnumerator Changescene(){
+        yield return new WaitForSeconds(1f);
+        // 現在のシーンを再読込する
+        SceneManager.LoadScene("result");
     }
 
 }

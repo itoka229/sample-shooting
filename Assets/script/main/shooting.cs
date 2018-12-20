@@ -3,8 +3,6 @@ using System.Collections.Generic;
 using UnityEngine;
 
 public class shooting : MonoBehaviour {
-    //base
-    public GameObject tumb;
     // bullet prefab
     public GameObject bullet;
     // 弾丸発射点
@@ -25,7 +23,7 @@ public class shooting : MonoBehaviour {
     void Update()
     {
         gamemaster = GameObject.FindGameObjectWithTag("gun").GetComponent<timerscript>().gamemaster;
-        score = tumb.GetComponent<scorescript>().score;
+        score = scorescript.score;
         //制限時間以内の時
         if (gamemaster == true)
         {
