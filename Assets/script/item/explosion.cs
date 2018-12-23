@@ -26,7 +26,7 @@ public class explosion : MonoBehaviour {
         {
             //相手のタグがbulletならば、爆発し自分を消す
             //爆発するものの生成
-            GameObject bomb = Instantiate(exp, transform.position + new Vector3(0,5,0), Quaternion.identity);
+            GameObject bomb = Instantiate(exp, transform.position + new Vector3(0,15,0), Quaternion.identity);
             bomb.transform.localScale = size * Vector3.one;
             //coliderを設定
             var collider = bomb.AddComponent<SphereCollider>();

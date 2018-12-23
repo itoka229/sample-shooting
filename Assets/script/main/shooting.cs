@@ -8,7 +8,7 @@ public class shooting : MonoBehaviour {
     // 弾丸発射点
     public Transform muzzle;
     //弾丸の速度
-    public float speed = 10000;
+    public float speed = 100000;
     //score
     public int score = 0;
     //gamemaster
@@ -27,9 +27,6 @@ public class shooting : MonoBehaviour {
         //制限時間以内の時
         if (gamemaster == true)
         {
-            //scoreが0より大きい時
-            if (score > 0)
-            {
                 //zキーが押されたとき弾丸発射
                 if (Input.GetKeyDown(KeyCode.Z))
                 {
@@ -44,7 +41,6 @@ public class shooting : MonoBehaviour {
                     bullets.transform.position = muzzle.position;
                 }
 
-            }
         }
 
     }
