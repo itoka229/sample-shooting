@@ -7,7 +7,6 @@ public class scorescript2 : MonoBehaviour {
 
 
     public Text scoreText; //Text用変数
-    private int score = 0; //スコア計算用変数
     private GameObject gamemaster;
     // Use this for initialization
     void Start()
@@ -20,28 +19,27 @@ public class scorescript2 : MonoBehaviour {
         //制限時間以内の時
         if (gamemaster.GetComponent<timerscript>().gamemaster == true)
         {
-            score = scorescript.score;
             //衝突した相手のタグを参照して得点を加算する
             string yourTag = collision.gameObject.tag;
 
             if (yourTag == "Target1")
             {
-                score += 30;
+                scorescript.score += 30;
                 gamemaster.GetComponent<timerscript>().tmpTime -= 10;
             }
 
             if (yourTag == "Target2")
             {
-                score += 60;
+               scorescript.score += 60;
             }
 
             if (yourTag == "Target3")
             {
-                score += 90;
+                scorescript.score += 90;
             }
             if (yourTag == "barrel")
             {
-                score += 0;
+                scorescript.score += 0;
             }
 
             SetScore();
@@ -52,6 +50,6 @@ public class scorescript2 : MonoBehaviour {
     void SetScore()
     {
         //スコアの再表示
-        scoreText.text = string.Format("Score:{0}", score);
+        scoreText.text = string.Format("Score:{0}", scorescript.score);
     }
 }
