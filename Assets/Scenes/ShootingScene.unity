@@ -1831,7 +1831,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   bullet: {fileID: 1814657599183102, guid: 39b7679a1c26b5c42b623b0b617cf93f, type: 2}
   muzzle: {fileID: 1884271602}
-  speed: 3000
+  speed: 5000
   score: 0
 --- !u!114 &1867528133
 MonoBehaviour:

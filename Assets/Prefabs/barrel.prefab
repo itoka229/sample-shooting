@@ -149,5 +149,5 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   exp: {fileID: 100000, guid: 15ca5b8fa431dc04291a79cadcd19874, type: 2}
-  size: 4
+  size: 6
   power: 10000000
