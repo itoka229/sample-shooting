@@ -1,16 +1,15 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using UnityEngine.UI;
 using UnityEngine.SceneManagement;
 
 public class startbutton : MonoBehaviour {
     
     //ボタンを押したらゲーム画面に移動する。
-    public void OnClick() {
+    public void OnClick()
+    {
 
-            SceneManager.LoadScene("waiting");
+        SceneManager.LoadScene("waiting");
 
-     }
-    
+    }    
 }
