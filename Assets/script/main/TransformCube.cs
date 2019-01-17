@@ -11,13 +11,23 @@ public class TransformCube : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
-        if (Input.GetKey(KeyCode.UpArrow))
+        var guntransform = transform.position;
+        //上限
+        if(guntransform.y < 13)
         {
-            transform.position += new Vector3(0, 0.1f, 0);
+            if (Input.GetKey(KeyCode.UpArrow))
+            {
+                transform.position += new Vector3(0, 0.1f, 0);
+            }
         }
-        if (Input.GetKey(KeyCode.DownArrow))
+        //下限
+        if (guntransform.y > -4)
         {
-            transform.position += new Vector3(0, -0.1f, 0);
+            if (Input.GetKey(KeyCode.DownArrow))
+            {
+                transform.position += new Vector3(0, -0.1f, 0);
+            }
         }
+
 	}
 }
