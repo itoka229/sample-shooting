@@ -19,6 +19,8 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 4809400917760784}
+  - component: {fileID: 114712299399802672}
+  - component: {fileID: 114425076756884722}
   m_Layer: 0
   m_Name: Hata
   m_TagString: Untagged
@@ -258,3 +260,25 @@ MeshFilter:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1393294686619324}
   m_Mesh: {fileID: 4300004, guid: 7446e6926796a5047859ffb5a64359ec, type: 3}
+--- !u!114 &114425076756884722
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1235614944285586}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4a28907290737aa46b41f06ae2a5a236, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &114712299399802672
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1235614944285586}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a17aad1a66e3df946b54e95a85e58e21, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
